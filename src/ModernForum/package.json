@@ -39,6 +39,13 @@
     "webpack-externals-plugin": "^1.0.0",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-merge": "^0.14.1",
-    "zone.js": "^0.6.21"
+    "zone.js": "^0.6.21",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2"
   }
 }
