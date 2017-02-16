@@ -13,7 +13,6 @@
 /// <reference path="../webpack.config.vendor.js" />
 /// <reference path="dist/main-client.js" />
 /// <reference path="dist/vendor.js" />
-/// <reference path="js/main (1).js" />
 /// <reference path="js/main.min.js" />
 /// <reference path="js/scrollreveal.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
