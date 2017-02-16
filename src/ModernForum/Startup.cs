@@ -13,6 +13,7 @@ using ModernForum.Services;
 using ModernForum.DbLevel.Contexts;
 using ModernForum.DbLevel.Entities;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace ModernForum
 {
@@ -55,7 +56,7 @@ namespace ModernForum
                 .AddDefaultTokenProviders();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            
+
 
             services.AddMvc();
 
@@ -75,6 +76,7 @@ namespace ModernForum
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions{ HotModuleReplacement = true });
             }
             else
             {

@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='compile-css, compile-main-less, publish-lib' />
+﻿/// <binding BeforeBuild='compile-css, compile-main-less' ProjectOpened='watch' />
 /*
 This file in the main entry point for defining Gulp tasks and using Gulp plugins.
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
@@ -38,7 +38,7 @@ gulp.task('compile-css', function () {
         .pipe(gulp.dest('wwwroot/css/'));
 });
 
-gulp.task('publish-lib', function () {
-    gulp.src('ClientApp/lib/**')
-        .pipe(gulp.dest('wwwroot/lib/'));
+gulp.task('watch', function () {
+    gulp.watch('ClientApp/less/*.less', ['compile-main-less']);
+    gulp.watch('ClientApp/css/*.css', ['compile-css']);
 });
