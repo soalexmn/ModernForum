@@ -1,4 +1,7 @@
-<div class='main-nav'>
+<div *ngIf="!showLeftNav" style="position: absolute; left: 2%; top: 20%">
+    <span class="btn" (click)="showLeftNav = true"><strong style="font-size: 40px">></strong></span>
+</div>
+<div class='main-nav' *ngIf="showLeftNav"> <!--[@enterAnimation]="showLeftNav"--> 
     <div class='navbar navbar-inverse'>
         <div class='navbar-header'>
             <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
@@ -31,3 +34,10 @@
         </div>
     </div>
 </div>
+<!--<md-sidenav-layout *ngIf="showLeftNav">
+    <md-sidenav #start align="start">
+        Start Sidenav.
+        <br>
+        <button md-button #mybutton (click)="showLeftNav = false">Close</button>
+    </md-sidenav>
+</md-sidenav-layout>-->
